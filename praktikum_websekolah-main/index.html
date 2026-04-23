@@ -1,0 +1,144 @@
+<!-- Deklarasi doctype untuk memberitahu browser bahwa ini adalah dokumen HTML5 -->
+<!DOCTYPE html>
+<!-- Tag html sebagai elemen utama dengan atribut bahasa Indonesia -->
+<html lang="id">
+<!-- Bagian head berisi pengaturan dan informasi halaman yang tidak tampil langsung -->
+<head>
+    <!-- Menentukan encoding karakter agar semua huruf terbaca benar -->
+    <meta charset="UTF-8">
+    <!-- Mengatur tampilan agar responsif sesuai lebar layar perangkat -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul halaman yang muncul di tab browser -->
+    <title>Portal SMA Inovasi Nusantara</title>
+    <!-- Menghubungkan file CSS eksternal untuk mengatur tampilan/desain -->
+    <link rel="stylesheet" href="style.css">
+<!-- Penutup tag head -->
+</head>
+<!-- Bagian body berisi semua konten yang akan ditampilkan di halaman web -->
+<body>
+
+    <!-- Header bagian atas halaman dengan class khusus styling -->
+    <header class="header-sekolah">
+        <!-- Div wadah untuk logo dan judul sekolah -->
+        <div class="logo-container">
+            <!-- Heading level 1 sebagai nama sekolah -->
+            <h1>SMA Inovasi Nusantara</h1>
+            <!-- Paragraf untuk motto sekolah -->
+            <p>Membentuk Generasi Kritis, Kreatif, dan Berkarakter</p>
+        <!-- Penutup div logo-container -->
+        </div>
+        <!-- Tag nav untuk bagian menu navigasi -->
+        <nav>
+            <!-- Unordered list sebagai wadah item menu -->
+            <ul>
+                <!-- Item list untuk link menu Beranda -->
+                <li><a href="#">Beranda</a></li>
+                <!-- Item list untuk link menu Profil -->
+                <li><a href="#">Profil</a></li>
+                <!-- Item list untuk link menu Ekstrakurikuler -->
+                <li><a href="#">Ekstrakurikuler</a></li>
+            <!-- Penutup unordered list -->
+            </ul>
+        <!-- Penutup tag nav -->
+        </nav>
+    <!-- Penutup tag header -->
+    </header>
+
+    <!-- Tag main sebagai wadah konten utama halaman -->
+    <main class="container">
+        <!-- Section untuk bagian informasi pendaftaran -->
+        <section class="info-section">
+            <!-- Article untuk membungkus teks informasi -->
+            <article>
+                <!-- Heading level 2 judul bagian -->
+                <h2>Pendaftaran Ekstrakurikuler Semester Ganjil</h2>
+                <!-- Paragraf penjelasan instruksi -->
+                <p>Silakan isi formulir di bawah ini untuk mendaftarkan diri Anda pada program pengembangan bakat dan minat sekolah.</p>
+            <!-- Penutup tag article -->
+            </article>
+        <!-- Penutup tag section -->
+        </section>
+
+        <!-- Div pembungkus untuk tata letak form dan daftar -->
+        <div class="content-wrapper">
+            <!-- Aside sebagai kolom kiri berisi form -->
+            <aside class="form-container">
+                <!-- Heading level 3 judul form -->
+                <h3>Form Pendaftaran Siswa</h3>
+                <!-- Form dengan id untuk dihubungkan dengan JavaScript -->
+                <form id="form-ekskul">
+                    <!-- Div grup input nama -->
+                    <div class="form-group">
+                        <!-- Label untuk input nama -->
+                        <label for="namaSiswa">Nama Lengkap Siswa:</label>
+                        <!-- Input teks untuk nama dengan id dan atribut required -->
+                        <input type="text" id="namaSiswa" name="nama_siswa" required>
+                    <!-- Penutup div form-group -->
+                    </div>
+                    <!-- Div grup input NISN -->
+                    <div class="form-group">
+                        <!-- Label untuk input NISN -->
+                        <label for="nisn">NISN (Nomor Induk Siswa Nasional):</label>
+                        <!-- Input teks untuk NISN dengan placeholder contoh dan required -->
+                        <input type="text" id="nisn" name="nisn" placeholder="Contoh: 1234567890" required>
+                    <!-- Penutup div form-group -->
+                    </div>
+                    <!-- Div grup pilihan ekskul -->
+                    <div class="form-group">
+                        <!-- Label untuk dropdown pilihan -->
+                        <label for="pilihanEkskul">Pilihan Ekstrakurikuler:</label>
+                        <!-- Select dropdown dengan id dan required -->
+                        <select id="pilihanEkskul" name="ekskul" required>
+                            <!-- Option default kosong sebagai petunjuk -->
+                            <option value="">-- Pilih Ekstrakurikuler --</option>
+                            <!-- Option untuk Pramuka dengan value sesuai -->
+                            <option value="Pramuka">Pramuka</option>
+                            <!-- Option untuk PMR dengan value sesuai -->
+                            <option value="Palang Merah Remaja (PMR)">Palang Merah Remaja (PMR)</option>
+                            <!-- Option untuk Klub Coding dengan value sesuai -->
+                            <option value="Klub Coding & Robotik">Klub Coding & Robotik</option>
+                            <!-- Option untuk Jurnalistik dengan value sesuai -->
+                            <option value="Jurnalistik">Jurnalistik Sekolah</option>
+                        <!-- Penutup tag select -->
+                        </select>
+                    <!-- Penutup div form-group -->
+                    </div>
+                    <!-- Tombol submit untuk mengirim form -->
+                    <button type="submit" id="btn-daftar">Daftarkan Diri</button>
+                    <!-- Paragraf untuk menampilkan pesan error dengan class tersembunyi -->
+                    <p id="error-msg" class="error-hidden"></p>
+                <!-- Penutup tag form -->
+                </form>
+            <!-- Penutup tag aside -->
+            </aside>
+
+            <!-- Section sebagai kolom kanan berisi output daftar -->
+            <section class="output-container">
+                <!-- Heading level 3 judul daftar siswa -->
+                <h3>Daftar Siswa Terdaftar</h3>
+                <!-- Div wadah untuk menampung kartu siswa -->
+                <div id="list-peserta">
+                    <!-- Paragraf teks saat daftar masih kosong -->
+                    <p class="empty-list">Belum ada siswa yang mendaftar.</p>
+                <!-- Penutup div list-peserta -->
+                </div>
+            <!-- Penutup tag section -->
+            </section>
+        <!-- Penutup div content-wrapper -->
+        </div>
+    <!-- Penutup tag main -->
+    </main>
+
+    <!-- Footer bagian bawah halaman -->
+    <footer class="footer-sekolah">
+        <!-- Paragraf teks copyright -->
+        <p>&copy; 2026 - Sistem Informasi Akademik SMA Inovasi Nusantara</p>
+    <!-- Penutup tag footer -->
+    </footer>
+
+    <!-- Menghubungkan file JavaScript eksternal untuk logika dan interaksi -->
+    <script src="sekolah.js"></script>
+<!-- Penutup tag body -->
+</body>
+<!-- Penutup tag html -->
+</html>

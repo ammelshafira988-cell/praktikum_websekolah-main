@@ -1,0 +1,350 @@
+/* Selector universal untuk mengatur semua elemen sekaligus */
+* {
+    /* Mengatur model box agar padding dan border masuk dalam ukuran total */
+    box-sizing: border-box;
+    /* Mengatur jenis font default menjadi Arial */
+    font-family: 'Arial', sans-serif;
+    /* Menghapus margin bawaan browser */
+    margin: 0;
+    /* Menghapus padding bawaan browser */
+    padding: 0;
+}
+
+/* Selector untuk elemen body halaman */
+body {
+    /* Mengatur warna latar belakang halaman menjadi PINK MUDA */
+    background-color: #ffebee;
+    /* Mengatur warna teks default menjadi abu-abu gelap */
+    color: #333;
+    /* Mengatur jarak antar baris teks agar lebih mudah dibaca */
+    line-height: 1.6;
+}
+
+/* Selector untuk bagian header sekolah */
+.header-sekolah {
+    /* Mengatur warna latar belakang header menjadi PINK TUA */
+    background-color: #c2185b;
+    /* Mengatur warna teks menjadi putih */
+    color: white;
+    /* Memberikan ruang di dalam elemen header */
+    padding: 20px;
+    /* Membuat teks berada di tengah */
+    text-align: center;
+}
+
+/* Selector untuk judul di dalam logo container */
+.logo-container h1 {
+    /* Memberikan jarak di bawah judul */
+    margin-bottom: 5px;
+}
+
+/* Selector untuk daftar menu di navigasi */
+nav ul {
+    /* Menghapus tanda titik/bullet pada list */
+    list-style: none;
+    /* Memberikan jarak di atas list */
+    margin-top: 15px;
+}
+
+/* Selector untuk setiap item menu */
+nav ul li {
+    /* Menampilkan item menu secara horizontal */
+    display: inline;
+    /* Memberikan jarak kiri dan kanan antar menu */
+    margin: 0 15px;
+}
+
+/* Selector untuk link di dalam menu */
+nav ul li a {
+    /* Mengatur warna teks link menjadi KUNING MUDA / CREAM */
+    color: #fff8e1;
+    /* Membuat teks menjadi tebal */
+    font-weight: bold;
+    /* Menghapus garis bawah pada link */
+    text-decoration: none;
+}
+
+/* Selector saat kursor diarahkan ke link (efek hover) */
+nav ul li a:hover {
+    /* Menambahkan garis bawah saat link disentuh */
+    text-decoration: underline;
+}
+
+/* Selector untuk wadah utama konten */
+.container {
+    /* Memberikan jarak atas dan bawah, serta otomatis rata tengah */
+    margin: 30px auto;
+    /* Membatasi lebar maksimal konten */
+    max-width: 1000px;
+    /* Memberikan ruang kiri dan kanan */
+    padding: 0 20px;
+}
+
+/* Selector untuk bagian informasi */
+.info-section {
+    /* Mengatur latar belakang menjadi putih */
+    background: white;
+    /* Memberikan garis tepi kiri berwarna PINK TUA */
+    border-left: 5px solid #c2185b;
+    /* Membuat sudut elemen menjadi melengkung */
+    border-radius: 8px;
+    /* Memberikan efek bayangan halus di bawah elemen */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Memberikan jarak di bawah elemen */
+    margin-bottom: 25px;
+    /* Memberikan ruang di dalam elemen */
+    padding: 20px;
+}
+
+/* Selector untuk pembungkus form dan daftar */
+.content-wrapper {
+    /* Menggunakan model flexbox untuk tata letak */
+    display: flex;
+    /* Mengatur agar elemen bisa turun ke baris baru jika layar sempit */
+    flex-wrap: wrap;
+    /* Memberikan jarak antar elemen */
+    gap: 20px;
+}
+
+/* Selector untuk kolom form dan kolom daftar */
+.form-container,
+.output-container {
+    /* Latar belakang putih */
+    background: white;
+    /* Sudut melengkung */
+    border-radius: 8px;
+    /* Efek bayangan */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Membuat lebar kolom fleksibel dan seimbang */
+    flex: 1;
+    /* Menentukan lebar minimal agar tidak terlalu kecil */
+    min-width: 300px;
+    /* Ruang di dalam elemen */
+    padding: 25px;
+}
+
+/* Selector untuk grup input di form */
+.form-group {
+    /* Jarak di bawah setiap grup input */
+    margin-bottom: 15px;
+}
+
+/* Selector untuk label teks petunjuk input */
+label {
+    /* Menampilkan label sebagai blok baris baru */
+    display: block;
+    /* Ukuran font label */
+    font-size: 14px;
+    /* Membuat teks label tebal */
+    font-weight: bold;
+    /* Jarak di bawah label */
+    margin-bottom: 5px;
+}
+
+/* Selector untuk kolom input teks dan dropdown */
+input,
+select {
+    /* Garis tepi berwarna abu-abu */
+    border: 1px solid #ccc;
+    /* Sudut melengkung */
+    border-radius: 4px;
+    /* Ruang di dalam input */
+    padding: 10px;
+    /* Lebar input memenuhi kolom */
+    width: 100%;
+}
+
+/* Selector saat input atau dropdown sedang diklik/difokuskan */
+input:focus,
+select:focus {
+    /* Mengubah warna garis tepi menjadi PINK TUA */
+    border-color: #c2185b;
+    /* Menghilangkan garis tepi bawaan browser */
+    outline: none;
+    /* Memberikan efek cahaya PINK di sekitar input */
+    box-shadow: 0 0 0 2px rgba(194, 24, 91, 0.2);
+}
+
+/* Selector untuk tombol */
+button {
+    /* Warna latar tombol menjadi PINK SEDANG */
+    background-color: #ec407a;
+    /* Menghilangkan garis tepi */
+    border: none;
+    /* Sudut melengkung */
+    border-radius: 4px;
+    /* Warna teks putih */
+    color: white;
+    /* Mengubah kursor menjadi tangan saat di atas tombol */
+    cursor: pointer;
+    /* Membuat teks tebal */
+    font-weight: bold;
+    /* Ruang di dalam tombol */
+    padding: 12px;
+    /* Efek transisi perubahan warna agar halus */
+    transition: 0.3s;
+    /* Lebar tombol memenuhi kolom */
+    width: 100%;
+}
+
+/* Selector saat kursor di atas tombol */
+button:hover {
+    /* Mengubah warna menjadi PINK TUA saat hover */
+    background-color: #c2185b;
+}
+
+/* Selector untuk menyembunyikan pesan error */
+.error-hidden {
+    /* Menyembunyikan elemen dari tampilan */
+    display: none;
+}
+
+/* Selector untuk menampilkan pesan error */
+.error-visible {
+    /* Mengatur warna teks menjadi MERAH */
+    color: #d32f2f;
+    /* Menampilkan elemen sebagai blok */
+    display: block;
+    /* Ukuran font pesan error */
+    font-size: 13px;
+    /* Membuat teks tebal */
+    font-weight: bold;
+    /* Jarak di atas pesan error */
+    margin-top: 10px;
+}
+
+/* Selector untuk kartu data siswa */
+.card-siswa {
+    /* Latar belakang PINK SANGAT MUDA */
+    background: #fce4ec;
+    /* Garis tepi tipis */
+    border: 1px solid #f8bbd0;
+    /* Sudut melengkung */
+    border-radius: 6px;
+    /* Jarak di bawah setiap kartu */
+    margin-bottom: 10px;
+    /* Ruang di dalam kartu */
+    padding: 15px;
+}
+
+/* Selector khusus untuk kartu Pramuka */
+.border-pramuka {
+    /* Garis tepi kiri berwarna COKLAT (tetap sesuai tema Pramuka) */
+    border-left: 5px solid #8B4513 !important;
+}
+
+/* Selector khusus untuk kartu PMR */
+.border-pmr {
+    /* Garis tepi kiri berwarna MERAH */
+    border-left: 5px solid #E74C3C !important;
+}
+
+/* Selector khusus untuk kartu Klub Coding */
+.border-coding {
+    /* Garis tepi kiri berwarna PINK TUA */
+    border-left: 5px solid #c2185b !important;
+}
+
+/* Selector untuk judul di dalam kartu siswa */
+.card-siswa h4 {
+    /* Warna teks PINK TUA */
+    color: #c2185b;
+    /* Jarak di bawah judul */
+    margin-bottom: 5px;
+}
+
+/* Selector untuk tombol hapus di dalam kartu */
+.btn-hapus {
+    /* Warna latar MERAH */
+    background-color: #e55039;
+    /* Jarak di atas tombol */
+    margin-top: 10px;
+    /* Lebar tombol tidak penuh, sesuai isi teks */
+    width: auto;
+    /* Ruang di dalam tombol */
+    padding: 5px 10px;
+    /* Ukuran font kecil */
+    font-size: 12px;
+}
+
+/* Selector saat hover tombol hapus */
+.btn-hapus:hover {
+    /* Warna berubah menjadi MERAH TUA */
+    background-color: #b71540;
+}
+
+/* Selector untuk teks saat daftar masih kosong */
+.empty-list {
+    /* Warna teks abu-abu */
+    color: #747d8c;
+    /* Gaya font miring */
+    font-style: italic;
+    /* Jarak di atas teks */
+    margin-top: 20px;
+    /* Teks rata tengah */
+    text-align: center;
+}
+
+/* Selector untuk bagian footer */
+.footer-sekolah {
+    /* Warna latar PINK TUA sama dengan header */
+    background-color: #c2185b;
+    /* Warna teks putih */
+    color: white;
+    /* Jarak di atas footer */
+    margin-top: 40px;
+    /* Ruang di dalam footer */
+    padding: 20px;
+    /* Teks rata tengah */
+    text-align: center;
+}
+
+/* ==============================================
+   TANTANGAN 2: STYLE WARNA BACKGROUND KARTU
+   ============================================== */
+
+/* Selector untuk kartu data siswa */
+.card-siswa {
+    /* Garis tepi tipis */
+    border: 1px solid #dfe4ea;
+    /* Sudut melengkung */
+    border-radius: 6px;
+    /* Jarak di bawah setiap kartu */
+    margin-bottom: 10px;
+    /* Ruang di dalam kartu */
+    padding: 15px;
+    /* Warna teks agar kontras */
+    color: #333;
+}
+
+/* Selector khusus untuk kartu Pramuka */
+.bg-pramuka {
+    /* Latar belakang warna COKLAT MUDA */
+    background-color: #d7ccc8 !important;
+    /* Garis tepi warna COKLAT TUA */
+    border: 2px solid #5d4037 !important;
+}
+
+/* Selector khusus untuk kartu PMR */
+.bg-pmr {
+    /* Latar belakang warna MERAH MUDA */
+    background-color: #ffcdd2 !important;
+    /* Garis tepi warna MERAH TUA */
+    border: 2px solid #c62828 !important;
+}
+
+/* Selector khusus untuk kartu Klub Coding */
+.bg-coding {
+    /* Latar belakang warna BIRU MUDA */
+    background-color: #bbdefb !important;
+    /* Garis tepi warna BIRU TUA */
+    border: 2px solid #0d47a1 !important;
+}
+
+/* Selector untuk judul di dalam kartu siswa */
+.card-siswa h4 {
+    /* Warna teks diubah menjadi gelap agar jelas di atas warna latar */
+    color: #222;
+    /* Jarak di bawah judul */
+    margin-bottom: 5px;
+}
