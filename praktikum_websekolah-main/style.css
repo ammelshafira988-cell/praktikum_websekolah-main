@@ -1,350 +1,598 @@
-/* Selector universal untuk mengatur semua elemen sekaligus */
+/* kode semua ini biar css nya lucu yeayy
+
+/* RESET & DASAR */
 * {
-    /* Mengatur model box agar padding dan border masuk dalam ukuran total */
     box-sizing: border-box;
-    /* Mengatur jenis font default menjadi Arial */
-    font-family: 'Arial', sans-serif;
-    /* Menghapus margin bawaan browser */
     margin: 0;
-    /* Menghapus padding bawaan browser */
     padding: 0;
+    font-family: 'Poppins', 'Quicksand', 'Comic Sans MS', sans-serif;
 }
 
-/* Selector untuk elemen body halaman */
 body {
-    /* Mengatur warna latar belakang halaman menjadi PINK MUDA */
-    background-color: #ffebee;
-    /* Mengatur warna teks default menjadi abu-abu gelap */
-    color: #333;
-    /* Mengatur jarak antar baris teks agar lebih mudah dibaca */
+    background-color: #fff0f8;
+    /* Background Polkadot */
+    background-image: 
+        radial-gradient(#ffc0cb 8px, transparent 8px),
+        radial-gradient(#ffc0cb 8px, transparent 8px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    
+    color: #444;
     line-height: 1.6;
+    padding: 10px;
 }
 
-/* Selector untuk bagian header sekolah */
-.header-sekolah {
-    /* Mengatur warna latar belakang header menjadi PINK TUA */
-    background-color: #c2185b;
-    /* Mengatur warna teks menjadi putih */
+/* HEADER */
+.logo-container {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
     color: white;
-    /* Memberikan ruang di dalam elemen header */
-    padding: 20px;
-    /* Membuat teks berada di tengah */
-    text-align: center;
-}
-
-/* Selector untuk judul di dalam logo container */
-.logo-container h1 {
-    /* Memberikan jarak di bawah judul */
-    margin-bottom: 5px;
-}
-
-/* Selector untuk daftar menu di navigasi */
-nav ul {
-    /* Menghapus tanda titik/bullet pada list */
-    list-style: none;
-    /* Memberikan jarak di atas list */
-    margin-top: 15px;
-}
-
-/* Selector untuk setiap item menu */
-nav ul li {
-    /* Menampilkan item menu secara horizontal */
-    display: inline;
-    /* Memberikan jarak kiri dan kanan antar menu */
-    margin: 0 15px;
-}
-
-/* Selector untuk link di dalam menu */
-nav ul li a {
-    /* Mengatur warna teks link menjadi KUNING MUDA / CREAM */
-    color: #fff8e1;
-    /* Membuat teks menjadi tebal */
-    font-weight: bold;
-    /* Menghapus garis bawah pada link */
-    text-decoration: none;
-}
-
-/* Selector saat kursor diarahkan ke link (efek hover) */
-nav ul li a:hover {
-    /* Menambahkan garis bawah saat link disentuh */
-    text-decoration: underline;
-}
-
-/* Selector untuk wadah utama konten */
-.container {
-    /* Memberikan jarak atas dan bawah, serta otomatis rata tengah */
-    margin: 30px auto;
-    /* Membatasi lebar maksimal konten */
-    max-width: 1000px;
-    /* Memberikan ruang kiri dan kanan */
-    padding: 0 20px;
-}
-
-/* Selector untuk bagian informasi */
-.info-section {
-    /* Mengatur latar belakang menjadi putih */
-    background: white;
-    /* Memberikan garis tepi kiri berwarna PINK TUA */
-    border-left: 5px solid #c2185b;
-    /* Membuat sudut elemen menjadi melengkung */
-    border-radius: 8px;
-    /* Memberikan efek bayangan halus di bawah elemen */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    /* Memberikan jarak di bawah elemen */
-    margin-bottom: 25px;
-    /* Memberikan ruang di dalam elemen */
-    padding: 20px;
-}
-
-/* Selector untuk pembungkus form dan daftar */
-.content-wrapper {
-    /* Menggunakan model flexbox untuk tata letak */
-    display: flex;
-    /* Mengatur agar elemen bisa turun ke baris baru jika layar sempit */
-    flex-wrap: wrap;
-    /* Memberikan jarak antar elemen */
-    gap: 20px;
-}
-
-/* Selector untuk kolom form dan kolom daftar */
-.form-container,
-.output-container {
-    /* Latar belakang putih */
-    background: white;
-    /* Sudut melengkung */
-    border-radius: 8px;
-    /* Efek bayangan */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    /* Membuat lebar kolom fleksibel dan seimbang */
-    flex: 1;
-    /* Menentukan lebar minimal agar tidak terlalu kecil */
-    min-width: 300px;
-    /* Ruang di dalam elemen */
     padding: 25px;
-}
-
-/* Selector untuk grup input di form */
-.form-group {
-    /* Jarak di bawah setiap grup input */
+    text-align: center;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
     margin-bottom: 15px;
 }
 
-/* Selector untuk label teks petunjuk input */
-label {
-    /* Menampilkan label sebagai blok baris baru */
-    display: block;
-    /* Ukuran font label */
-    font-size: 14px;
-    /* Membuat teks label tebal */
-    font-weight: bold;
-    /* Jarak di bawah label */
-    margin-bottom: 5px;
+@keyframes cuteWobble {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
 }
 
-/* Selector untuk kolom input teks dan dropdown */
-input,
-select {
-    /* Garis tepi berwarna abu-abu */
-    border: 1px solid #ccc;
-    /* Sudut melengkung */
-    border-radius: 4px;
-    /* Ruang di dalam input */
-    padding: 10px;
-    /* Lebar input memenuhi kolom */
-    width: 100%;
+.logo-container h1 {
+    display: inline-block;
+    animation: cuteWobble 3s infinite ease-in-out;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
+.logo-container h1::before { content: "🏫 "; }
+.logo-container h1::after { content: " 🎀"; }
 
-/* Selector saat input atau dropdown sedang diklik/difokuskan */
-input:focus,
-select:focus {
-    /* Mengubah warna garis tepi menjadi PINK TUA */
-    border-color: #c2185b;
-    /* Menghilangkan garis tepi bawaan browser */
-    outline: none;
-    /* Memberikan efek cahaya PINK di sekitar input */
-    box-shadow: 0 0 0 2px rgba(194, 24, 91, 0.2);
-}
-
-/* Selector untuk tombol */
-button {
-    /* Warna latar tombol menjadi PINK SEDANG */
-    background-color: #ec407a;
-    /* Menghilangkan garis tepi */
-    border: none;
-    /* Sudut melengkung */
-    border-radius: 4px;
-    /* Warna teks putih */
-    color: white;
-    /* Mengubah kursor menjadi tangan saat di atas tombol */
-    cursor: pointer;
-    /* Membuat teks tebal */
-    font-weight: bold;
-    /* Ruang di dalam tombol */
-    padding: 12px;
-    /* Efek transisi perubahan warna agar halus */
-    transition: 0.3s;
-    /* Lebar tombol memenuhi kolom */
-    width: 100%;
-}
-
-/* Selector saat kursor di atas tombol */
-button:hover {
-    /* Mengubah warna menjadi PINK TUA saat hover */
-    background-color: #c2185b;
-}
-
-/* Selector untuk menyembunyikan pesan error */
-.error-hidden {
-    /* Menyembunyikan elemen dari tampilan */
-    display: none;
-}
-
-/* Selector untuk menampilkan pesan error */
-.error-visible {
-    /* Mengatur warna teks menjadi MERAH */
-    color: #d32f2f;
-    /* Menampilkan elemen sebagai blok */
-    display: block;
-    /* Ukuran font pesan error */
-    font-size: 13px;
-    /* Membuat teks tebal */
-    font-weight: bold;
-    /* Jarak di atas pesan error */
-    margin-top: 10px;
-}
-
-/* Selector untuk kartu data siswa */
-.card-siswa {
-    /* Latar belakang PINK SANGAT MUDA */
-    background: #fce4ec;
-    /* Garis tepi tipis */
-    border: 1px solid #f8bbd0;
-    /* Sudut melengkung */
-    border-radius: 6px;
-    /* Jarak di bawah setiap kartu */
-    margin-bottom: 10px;
-    /* Ruang di dalam kartu */
+/* NAVIGASI */
+nav {
+    background-color: #ffb6c1;
     padding: 15px;
-}
-
-/* Selector khusus untuk kartu Pramuka */
-.border-pramuka {
-    /* Garis tepi kiri berwarna COKLAT (tetap sesuai tema Pramuka) */
-    border-left: 5px solid #8B4513 !important;
-}
-
-/* Selector khusus untuk kartu PMR */
-.border-pmr {
-    /* Garis tepi kiri berwarna MERAH */
-    border-left: 5px solid #E74C3C !important;
-}
-
-/* Selector khusus untuk kartu Klub Coding */
-.border-coding {
-    /* Garis tepi kiri berwarna PINK TUA */
-    border-left: 5px solid #c2185b !important;
-}
-
-/* Selector untuk judul di dalam kartu siswa */
-.card-siswa h4 {
-    /* Warna teks PINK TUA */
-    color: #c2185b;
-    /* Jarak di bawah judul */
-    margin-bottom: 5px;
-}
-
-/* Selector untuk tombol hapus di dalam kartu */
-.btn-hapus {
-    /* Warna latar MERAH */
-    background-color: #e55039;
-    /* Jarak di atas tombol */
-    margin-top: 10px;
-    /* Lebar tombol tidak penuh, sesuai isi teks */
-    width: auto;
-    /* Ruang di dalam tombol */
-    padding: 5px 10px;
-    /* Ukuran font kecil */
-    font-size: 12px;
-}
-
-/* Selector saat hover tombol hapus */
-.btn-hapus:hover {
-    /* Warna berubah menjadi MERAH TUA */
-    background-color: #b71540;
-}
-
-/* Selector untuk teks saat daftar masih kosong */
-.empty-list {
-    /* Warna teks abu-abu */
-    color: #747d8c;
-    /* Gaya font miring */
-    font-style: italic;
-    /* Jarak di atas teks */
-    margin-top: 20px;
-    /* Teks rata tengah */
     text-align: center;
+    border-radius: 20px;
+    margin: 10px auto;
+    max-width: 1000px;
 }
 
-/* Selector untuk bagian footer */
-.footer-sekolah {
-    /* Warna latar PINK TUA sama dengan header */
-    background-color: #c2185b;
-    /* Warna teks putih */
-    color: white;
-    /* Jarak di atas footer */
-    margin-top: 40px;
-    /* Ruang di dalam footer */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav ul li {
+    background-color: white;
+    padding: 8px 18px;
+    border-radius: 50px;
+    transition: transform 0.3s;
+    border: none !important; /* Hapus border lama */
+    width: auto !important; /* Hapus lebar 20% yang bikin panjang */
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+nav ul li:nth-child(1)::before { content: "🏠 "; }
+nav ul li:nth-child(2)::before { content: "📝 "; }
+nav ul li:nth-child(3)::before { content: "📋 "; }
+nav ul li:nth-child(4)::before { content: "ℹ️ "; }
+
+nav ul li a {
+    color: #d63384;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* KONTENER UTAMA */
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* BAGIAN INFO */
+.info-section {
+    background: white;
+    border: 3px dashed #ffb6c1 !important;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
     padding: 20px;
-    /* Teks rata tengah */
-    text-align: center;
+    margin-bottom: 25px;
 }
 
-/* ==============================================
-   TANTANGAN 2: STYLE WARNA BACKGROUND KARTU
-   ============================================== */
+/* WRAPPER FORM & DAFTAR */
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-/* Selector untuk kartu data siswa */
+/* BOX FORM & OUTPUT */
+.form-container,
+.output-container {
+    background: #fff url('https://www.transparenttextures.com/patterns/cubes.png') repeat;
+    border: 3px dashed #ff99cc !important;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 300px;
+    padding: 25px;
+}
+
+.form-container h2::before { content: "✏️ "; }
+.output-container h2::before { content: "📋 "; }
+
+/* FORM INPUT */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #c71585;
+}
+
+label[for="nama"]::before { content: "👧 "; }
+label[for="kelas"]::before { content: "🏫 "; }
+label[for="ekskul"]::before { content: "⚽️ "; }
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffc0cb;
+    border-radius: 15px;
+    background-color: #fff9fb;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    border-color: #ff1493;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.2);
+    background-color: white;
+}
+
+::placeholder {
+    color: #ff99bb;
+    font-style: italic;
+}
+
+/* TOMBOL */
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(to right, #ff7eb9, #ff5cad);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(255, 105, 180, 0.4);
+    border: 3px solid white !important;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ff5cad, #ff1493);
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* KARTU SISWA */
 .card-siswa {
-    /* Garis tepi tipis */
-    border: 1px solid #dfe4ea;
-    /* Sudut melengkung */
-    border-radius: 6px;
-    /* Jarak di bawah setiap kartu */
-    margin-bottom: 10px;
-    /* Ruang di dalam kartu */
-    padding: 15px;
-    /* Warna teks agar kontras */
-    color: #333;
+    background: #fce4ec;
+    border-radius: 18px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid white;
 }
 
-/* Selector khusus untuk kartu Pramuka */
+.card-siswa::before {
+    content: "✨";
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    font-size: 20px;
+    transform: rotate(20deg);
+}
+
+.card-siswa:hover {
+    transform: scale(1.03) rotate(-0.5deg);
+    border: 3px dotted #ff1493 !important;
+}
+
+/* WARNA KHUSUS EKSKUL */
 .bg-pramuka {
-    /* Latar belakang warna COKLAT MUDA */
-    background-color: #d7ccc8 !important;
-    /* Garis tepi warna COKLAT TUA */
-    border: 2px solid #5d4037 !important;
+    background-color: #f5e6d3 !important;
+    border: 3px solid #a0522d !important;
 }
+.bg-pramuka h4::before { content: "🌳 "; }
 
-/* Selector khusus untuk kartu PMR */
 .bg-pmr {
-    /* Latar belakang warna MERAH MUDA */
-    background-color: #ffcdd2 !important;
-    /* Garis tepi warna MERAH TUA */
-    border: 2px solid #c62828 !important;
+    background-color: #ffebee !important;
+    border: 3px solid #e74c3c !important;
 }
+.bg-pmr h4::before { content: "❤️ "; }
 
-/* Selector khusus untuk kartu Klub Coding */
 .bg-coding {
-    /* Latar belakang warna BIRU MUDA */
-    background-color: #bbdefb !important;
-    /* Garis tepi warna BIRU TUA */
-    border: 2px solid #0d47a1 !important;
+    background-color: #e3f2fd !important;
+    border: 3px solid #2196f3 !important;
+}
+.bg-coding h4::before { content: "💻 "; }
+
+.card-siswa h4 {
+    color: #222;
+    margin-bottom: 8px;
+    font-size: 18px;
 }
 
-/* Selector untuk judul di dalam kartu siswa */
-.card-siswa h4 {
-    /* Warna teks diubah menjadi gelap agar jelas di atas warna latar */
-    color: #222;
-    /* Jarak di bawah judul */
-    margin-bottom: 5px;
+/* TOMBOL HAPUS */
+.btn-hapus {
+    background-color: #ff6b81 !important;
+    margin-top: 10px;
+    width: auto;
+    padding: 6px 15px;
+    font-size: 13px;
+    border-radius: 20px;
+}
+
+.btn-hapus:hover {
+    background-color: #ff4757 !important;
+}
+
+/* TEKS KOSONG */
+.empty-list {
+    color: #aaa;
+    font-style: italic;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 15px;
+}
+
+/* FOOTER */
+.footer-sekolah {
+    background: linear-gradient(135deg, #fad0c4 0%, #ffd1ff 100%);
+    color: #d63384;
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    font-weight: bold;
+}
+
+/* KURSOR LUCU */
+button, nav ul li, .card-siswa {
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1039.cur'), auto !important;
+}
+
+/* 1. EFEK BINTANG BERKELAP-KELIP DI BACKGROUND */
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "✨ ✨ ✨";
+    position: fixed;
+    top: 10%;
+    left: -100px;
+    font-size: 30px;
+    animation: bergerakKanan 15s linear infinite;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+body::after {
+    content: "💖 💖 💖";
+    position: fixed;
+    top: 60%;
+    right: -100px;
+    font-size: 25px;
+    animation: bergerakKiri 18s linear infinite;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+@keyframes bergerakKanan {
+  0% { transform: translateX(0) rotate(0deg); }
+  100% { transform: translateX(120vw) rotate(360deg); }
+}
+
+@keyframes bergerakKiri {
+  0% { transform: translateX(0) rotate(0deg); }
+  100% { transform: translateX(-120vw) rotate(-360deg); }
+}
+
+/* 2. JUDUL WARNA PELANGI */
+.logo-container h1 {
+    background: linear-gradient(to right, #ff0080, #ff80c0, #ffff80, #80ff80, #80ffff, #8080ff, #ff0080);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent !important;
+    animation: rainbow 5s linear infinite;
+    background-size: 500% 500%;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 3. EFEK TOMBOL NAIK & MELEDAK KECIL */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: "";
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transform: scale(0, 0);
+    opacity: 0;
+}
+
+button:active::after {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(50, 50);
+        opacity: 0;
+    }
+}
+
+/* 4. TAMBAH STIKER KECIL DI SUDUT BOX */
+.form-container::before {
+    content: "🎀";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    font-size: 40px;
+    transform: rotate(-20deg);
+}
+
+.output-container::before {
+    content: "📝";
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 40px;
+    transform: rotate(20deg);
+}
+
+/* Jangan lupa tambahin ini biar posisi absolute jalan */
+.form-container, .output-container {
+    position: relative !important;
+}
+
+/* 5. BAYANGAN TEKS & BOX BIAR KAYAK BONEKA */
+h2, h3, h4 {
+    text-shadow: 2px 2px 0px #ffd1e8;
+}
+
+.info-section, .form-container, .output-container {
+    box-shadow: 8px 8px 0px #ffb6c1 !important;
+    border: 3px solid #333 !important;
+}
+
+/* 6. SCROLLBAR YANG LUCU */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff0f8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#ff9a9e, #fad0c4);
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+/* 7. EFek GETAR SEDIKIT PAS KARTU DI- HOVER */
+.card-siswa:hover {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    20% { transform: translate(-1px, -2px) rotate(-1deg); }
+    40% { transform: translate(-3px, 0px) rotate(1deg); }
+    60% { transform: translate(3px, 2px) rotate(0deg); }
+    80% { transform: translate(1px, -1px) rotate(1deg); }
+    100% { transform: translate(1px, 2px) rotate(-1deg); }
+}
+/* Efek Love Muncul */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button.clicked::before {
+    content: "💖";
+    position: absolute;
+    animation: lovePop 0.8s ease-out;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+}
+
+@keyframes lovePop {
+    0% { transform: scale(0); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+/* Efek Ketik */
+input:focus {
+    color: #c2185b !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+/* ============================================== */
+/* EFEK SUPER SERU & GACHA STYLE */
+/* ============================================== */
+
+/* biar background nya jalan terus */
+body {
+    animation: bgMove 10s linear infinite;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0 0, 20px 20px; }
+    100% { background-position: 40px 40px, 60px 60px; }
+}
+
+/* tambahin bintang berjatuhan biar keren */
+body::before {
+    content: "💫 ✨ 🎇 ✨ 💫";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    animation: rain 10s linear infinite;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+@keyframes rain {
+  0% { transform: translateY(-100px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* judul nya melayang terus ada cahaya nya */
+.logo-container h1 {
+    animation: floating 3s ease-in-out infinite, rainbow 5s linear infinite !important;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* menu nya jadi gedean dikit pas di sentuh */
+nav ul li {
+    transition: all 0.2s !important;
+    border: 3px solid white !important;
+}
+
+nav ul li:hover {
+    transform: scale(1.2) rotate(-5deg) !important;
+    box-shadow: 0 0 20px #ff69b4 !important; /* diganti pink */
+    background: #fff0f8 !important; /* diganti pink muda */
+}
+
+/* pas ngetik kotak nya membesar & bersinar */
+input:focus, select:focus {
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 25px #ff69b4, inset 0 0 10px white !important;
+    background: #fff !important;
+}
+
+/* tombol daftar warna nya pink bergerak */
+#btn-daftar {
+    background: linear-gradient(45deg, #ff0080, #ff69b4, #ffb6c1) !important; /* diganti gradasi pink */
+    background-size: 200% 200% !important;
+    animation: gradientMove 3s ease infinite !important;
+    border: none !important;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#btn-daftar:hover {
+    transform: translateY(-5px) scale(1.05) !important;
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6) !important; /* diganti pink */
+}
+
+/* kartu siswa jadi ada aura pas di pegang mouse */
+.card-siswa {
+    transition: all 0.3s !important;
+}
+
+.card-siswa:hover {
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 30px #ff69b4, 0 10px 20px rgba(0,0,0,0.1) !important; /* diganti pink */
+    border: 3px solid white !important;
+}
+
+/* ganti kursor jadi lucu */
+* {
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1039.cur'), auto !important;
+}
+
+/* efek cahaya muter di dalem kotak */
+.form-container, .output-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::after, .output-container::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,192,203,0.4) 0%, rgba(255,192,203,0) 70%); /* diganti pink */
+    animation: shine 4s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% { transform: translate(30%, 30%) rotate(0deg); }
+    100% { transform: translate(-30%, -30%) rotate(180deg); }
+}
+
+/* icon di tulisan nya loncat loncat lucu */
+label::before {
+    display: inline-block;
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    from { transform: scale(1); }
+    to { transform: scale(1.3); }
 }

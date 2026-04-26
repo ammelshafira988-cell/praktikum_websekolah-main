@@ -18,6 +18,19 @@ formEkskul.addEventListener('submit', function(event) {
     const nisn = document.getElementById('nisn').value.trim();
     // Mengambil nilai pilihan ekstrakurikuler dari dropdown
     const ekskul = document.getElementById('pilihanEkskul').value;
+    // Mengambil nilai input Kelas
+    const kelas = document.getElementById('kelas').value;
+    // Mengambil nilai input No HP/WA
+    const nohp = document.getElementById('nohp').value; 
+
+    // ==============================================
+    // MEMBUAT NAMA OTOMATIS HURUF BESAR
+    // ==============================================
+    // Mengubah huruf pertama setiap kata jadi besar agar tampilan rapi
+    // (INI CUMA SATU KALI AJA, GAK ADA DUPLIKAT)
+    const namaFix = nama.toLowerCase().split(' ').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
 
     // ==============================================
     // TANTANGAN 1: VALIDASI PANJANG DAN ISI NISN
@@ -75,8 +88,10 @@ formEkskul.addEventListener('submit', function(event) {
 
     // Mengisi struktur HTML ke dalam kartu siswa
     cardSiswa.innerHTML = `
-        <h4>${nama}</h4>
+        <h4>${namaFix}</h4>
         <p><strong>NISN:</strong> ${nisn}</p>
+        <p><strong>Kelas:</strong> ${kelas}</p>  
+        <p><strong>WhatsApp:</strong> ${nohp}</p> 
         <p><strong>Ekstrakurikuler:</strong> ${ekskul}</p>
         <button class="btn-hapus">Batalkan Pendaftaran / Hapus</button>
     `;
@@ -95,6 +110,20 @@ formEkskul.addEventListener('submit', function(event) {
 
     // Memasukkan kartu siswa yang sudah jadi ke dalam daftar
     listPeserta.appendChild(cardSiswa);
+
+    // ==============================================
+    // TAMBAHAN: EFEK LOVE MUNCUL KETIKA DATA MASUK
+    // ==============================================
+    // Membuat elemen love
+    const love = document.createElement('span');
+    love.innerHTML = "💖";
+    love.style.position = "absolute";
+    love.style.fontSize = "30px";
+    love.style.animation = "lovePop 0.8s ease-out";
+    cardSiswa.appendChild(love);
+
+    // Menghapus elemen love setelah animasi selesai
+    setTimeout(() => love.remove(), 800);
 
     // Mengosongkan atau mereset kolom input form
     formEkskul.reset();
